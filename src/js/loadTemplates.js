@@ -24,5 +24,8 @@ $(document).ready(function () {
         loadTemplate(0);
     }
 
-    loadTemplates(['search']);
+    loadTemplates([
+        'navbar',
+        'search'
+    ]);
 });

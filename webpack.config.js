@@ -17,6 +17,10 @@ module.exports = {
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
+            template: './src/navbar.html',
+            filename: 'navbar.html',
+        }),
+        new HtmlWebpackPlugin({
             template: './src/search.html',
             filename: 'search.html',
         }),
