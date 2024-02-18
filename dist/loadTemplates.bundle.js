@@ -1,0 +1,1 @@
+$(document).ready((function(){var e;e="search",$.ajax({url:`${e}.html`,method:"GET",success:function(o){$("#app").html(o),console.log(`Template: ${e} has been loaded successfully!`)},error:function(){$("#app").html("<p>Error loading template.</p>"),console.log("Error loading template.")}})}));
