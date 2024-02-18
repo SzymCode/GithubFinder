@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const { DefinePlugin } = require('webpack');
+const dotenv = require('dotenv');
+dotenv.config();
 
 module.exports = {
     entry: {
@@ -24,6 +26,9 @@ module.exports = {
             template: './src/search.html',
             filename: 'search.html',
         }),
-        new Dotenv(),
+        new DefinePlugin({
+            'process.env.GITHUB_CLIENT_ID': JSON.stringify(process.env.GITHUB_CLIENT_ID),
+            'process.env.GITHUB_CLIENT_SECRET': JSON.stringify(process.env.GITHUB_CLIENT_SECRET)
+        })
     ]
 };

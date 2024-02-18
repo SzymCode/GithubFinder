@@ -1,1 +1,0 @@
-$(document).ready((function(){var e;e=["navbar","search"],function n(o){if(o<e.length){const a=e[o];$.ajax({url:`${a}.html`,method:"GET",success:function(e){$("#app").append(e),console.log(`${o+1}. Template: ${a}.html has been loaded successfully!`),n(o+1)},error:function(){$("#app").append("<p>Error loading template.</p>"),console.log("Error loading template.")}})}}(0)}));
